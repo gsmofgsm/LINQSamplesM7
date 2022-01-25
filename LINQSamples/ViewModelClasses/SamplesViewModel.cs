@@ -161,12 +161,14 @@ namespace LINQSamples
             if (UseQuerySyntax)
             {
                 // Query Syntax
-
+                exceptions = (from num in list1
+                              select num)
+                              .Except(list2).ToList();
             }
             else
             {
                 // Method Syntax
-
+                exceptions = list1.Except(list2).ToList();
             }
 
             ResultText = string.Empty;
@@ -199,12 +201,14 @@ namespace LINQSamples
             if (UseQuerySyntax)
             {
                 // Query Syntax
-
+                Products = (from prod in list1
+                            select prod)
+                            .Except(list2, pc).ToList();
             }
             else
             {
                 // Method Syntax
-
+                Products = list1.Except(list2, pc).ToList();
             }
 
             ResultText = $"Total Products: {Products.Count}";
