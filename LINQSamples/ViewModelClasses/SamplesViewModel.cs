@@ -235,12 +235,13 @@ namespace LINQSamples
             if (UseQuerySyntax)
             {
                 // Query Syntax
-
+                Products = (from prod in list1 select prod)
+                    .Intersect(list2, pc).ToList();
             }
             else
             {
                 // Method Syntax
-
+                Products = list1.Intersect(list2, pc).ToList();
             }
 
             ResultText = $"Total Products: {Products.Count}";

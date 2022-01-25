@@ -18,7 +18,8 @@ namespace LINQSamples
             //vm.SequenceEqualProducts();
             //vm.SequenceEqualUsingComparer();
             //vm.ExceptIntegers();
-            vm.Except();
+            //vm.Except();
+            vm.Intersect();
 
             // Display Product Collection
             foreach (var item in vm.Products)
