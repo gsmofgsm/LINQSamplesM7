@@ -264,12 +264,16 @@ namespace LINQSamples
             if (UseQuerySyntax)
             {
                 // Query Syntax
-
+                Products = (from product in list1 select product)
+                    .Union(list2, pc)
+                    .OrderBy(prod => prod.Name)
+                    .ToList();
             }
             else
             {
                 // Method Syntax
-
+                Products = list1.Union(list2, pc)
+                    .OrderBy(prod => prod.Name).ToList();
             }
 
             ResultText = $"Total Products: {Products.Count}";
