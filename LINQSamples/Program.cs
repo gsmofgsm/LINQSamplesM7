@@ -20,7 +20,8 @@ namespace LINQSamples
             //vm.ExceptIntegers();
             //vm.Except();
             //vm.Intersect();
-            vm.Union();
+            //vm.Union();
+            vm.LINQConcat();
 
             // Display Product Collection
             foreach (var item in vm.Products)
