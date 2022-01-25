@@ -15,7 +15,8 @@ namespace LINQSamples
 
             // Call a sample method
             //vm.SequenceEqualIntegers();
-            vm.SequenceEqualProducts();
+            //vm.SequenceEqualProducts();
+            vm.SequenceEqualUsingComparer();
 
             // Display Product Collection
             foreach (var item in vm.Products)

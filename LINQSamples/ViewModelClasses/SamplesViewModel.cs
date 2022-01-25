@@ -122,12 +122,14 @@ namespace LINQSamples
             if (UseQuerySyntax)
             {
                 // Query Syntax
-
+                value = (from prod in list1
+                         select prod)
+                         .SequenceEqual(list2, pc);
             }
             else
             {
                 // Method Syntax
-
+                value = list1.SequenceEqual(list2, pc);
             }
 
             if (value)
