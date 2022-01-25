@@ -2,27 +2,29 @@
 
 namespace LINQSamples
 {
-  class Program
-  {
-    static void Main(string[] args)
+    class Program
     {
-      // Instantiate the ViewModel
-      SamplesViewModel vm = new SamplesViewModel
-      {
-        // Use Query or Method Syntax?
-        UseQuerySyntax = true
-      };
+        static void Main(string[] args)
+        {
+            // Instantiate the ViewModel
+            SamplesViewModel vm = new SamplesViewModel
+            {
+                // Use Query or Method Syntax?
+                UseQuerySyntax = true
+            };
 
-      // Call a sample method
-      vm.SequenceEqualIntegers();
+            // Call a sample method
+            //vm.SequenceEqualIntegers();
+            vm.SequenceEqualProducts();
 
-      // Display Product Collection
-      foreach (var item in vm.Products) {
-        Console.Write(item.ToString());
-      }
+            // Display Product Collection
+            foreach (var item in vm.Products)
+            {
+                Console.Write(item.ToString());
+            }
 
-      // Display Result Text
-      Console.WriteLine(vm.ResultText);
+            // Display Result Text
+            Console.WriteLine(vm.ResultText);
+        }
     }
-  }
 }
